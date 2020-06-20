@@ -7,9 +7,9 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-g",
-                "${workspaceFolder}/*cpp",
+                "${workspaceFolder}/src/*.cpp",
                 "-o",
-                "../bin/${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/../bin/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "/usr/bin"
@@ -28,7 +28,7 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-g",
-                "${file}",
+                "${workspaceFolder}/src/*.cpp",
                 "-o",
                 "${fileDirname}/../bin/${fileBasenameNoExtension}"
             ],
@@ -36,19 +36,5 @@
                 "cwd": "/usr/bin"
             }
         },
-        {
-            "type": "shell",
-            "label": "cpp build active file",
-            "command": "/usr/bin/cpp",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "/usr/bin"
-            }
-        }
     ]
 }
